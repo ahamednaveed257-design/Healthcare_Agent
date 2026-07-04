@@ -1,0 +1,134 @@
+{
+  "acetaminophen": {
+    "aliases": ["paracetamol", "tylenol", "apap"],
+    "common_use": "Acetaminophen is commonly used for mild to moderate pain and fever.",
+    "general_guidance": "Use only as directed on the package label or by your prescriber. Avoid taking more than one product containing acetaminophen at the same time.",
+    "side_effects": ["nausea", "rash", "liver injury if too much is taken"],
+    "warnings": [
+      "Ask a clinician or pharmacist before use if you have liver disease or drink alcohol heavily.",
+      "Seek urgent help if you may have taken more than directed, even if you feel well."
+    ],
+    "source": {"name": "MedlinePlus - Acetaminophen", "url": "https://medlineplus.gov/druginfo/meds/a681004.html"}
+  },
+  "ibuprofen": {
+    "aliases": ["advil", "motrin", "nsaid"],
+    "common_use": "Ibuprofen is a nonsteroidal anti-inflammatory drug used for pain, fever, or inflammation.",
+    "general_guidance": "Use the label or prescriber instructions. Taking it with food or milk may reduce stomach upset.",
+    "side_effects": ["stomach upset", "heartburn", "dizziness"],
+    "warnings": [
+      "Ask a clinician before use if you have kidney disease, stomach ulcers, take blood thinners, are pregnant, or were told to avoid NSAIDs.",
+      "Seek urgent help for black stools, vomiting blood, swelling of the face or throat, or trouble breathing."
+    ],
+    "source": {"name": "MedlinePlus - Ibuprofen", "url": "https://medlineplus.gov/druginfo/meds/a682159.html"}
+  },
+  "aspirin": {
+    "aliases": ["asa", "bayer"],
+    "common_use": "Aspirin may be used for pain or fever and may be prescribed for heart or stroke prevention.",
+    "general_guidance": "Use it only as directed on the label or by your prescriber.",
+    "side_effects": ["stomach irritation", "easy bruising", "bleeding"],
+    "warnings": [
+      "Do not give aspirin to children or teenagers unless a clinician specifically says to.",
+      "Ask a clinician before use if you take blood thinners or have a bleeding disorder."
+    ],
+    "source": {"name": "MedlinePlus - Aspirin", "url": "https://medlineplus.gov/druginfo/meds/a682878.html"}
+  },
+  "metformin": {
+    "aliases": ["glucophage"],
+    "common_use": "Metformin is prescribed to help manage blood sugar in type 2 diabetes.",
+    "general_guidance": "Take it exactly as prescribed and follow your care team's blood sugar monitoring plan.",
+    "side_effects": ["nausea", "diarrhea", "stomach discomfort"],
+    "warnings": [
+      "Tell your clinician about kidney, liver, heart, or heavy alcohol use risks.",
+      "Seek urgent help for severe weakness, unusual sleepiness, deep or rapid breathing, severe vomiting, or feeling very cold."
+    ],
+    "source": {"name": "MedlinePlus - Metformin", "url": "https://medlineplus.gov/druginfo/meds/a696005.html"}
+  },
+  "amoxicillin": {
+    "aliases": ["amoxil"],
+    "common_use": "Amoxicillin is an antibiotic used for certain bacterial infections.",
+    "general_guidance": "Take it exactly as prescribed and finish the course unless your clinician tells you to stop.",
+    "side_effects": ["nausea", "diarrhea", "rash"],
+    "warnings": [
+      "Get urgent help for swelling of the lips, face, or throat, wheezing, or a severe rash.",
+      "Tell your clinician if you have had an allergic reaction to penicillin-type antibiotics."
+    ],
+    "source": {"name": "MedlinePlus - Amoxicillin", "url": "https://medlineplus.gov/druginfo/meds/a685001.html"}
+  },
+  "albuterol": {
+    "aliases": ["salbutamol", "ventolin", "proair", "rescue inhaler"],
+    "common_use": "Albuterol is a quick-relief bronchodilator used for wheezing or breathing symptoms in conditions such as asthma.",
+    "general_guidance": "Use it only according to your asthma action plan or prescriber instructions.",
+    "side_effects": ["shakiness", "fast heartbeat", "nervousness", "headache"],
+    "warnings": [
+      "Seek urgent help if breathing trouble is severe or the rescue inhaler is not helping.",
+      "Contact your care team if you need it more often than usual."
+    ],
+    "source": {"name": "MedlinePlus - Albuterol Oral Inhalation", "url": "https://medlineplus.gov/druginfo/meds/a682145.html"}
+  },
+  "cetirizine": {
+    "aliases": ["zyrtec"],
+    "common_use": "Cetirizine is an antihistamine used for allergy symptoms such as sneezing, runny nose, itchy eyes, or hives.",
+    "general_guidance": "Use as directed on the label or by your clinician.",
+    "side_effects": ["sleepiness", "dry mouth", "tiredness"],
+    "warnings": [
+      "Avoid driving or alcohol if it makes you sleepy.",
+      "Seek urgent help for trouble breathing or swelling of the face, lips, tongue, or throat."
+    ],
+    "source": {"name": "MedlinePlus - Cetirizine", "url": "https://medlineplus.gov/druginfo/meds/a698026.html"}
+  },
+  "loratadine": {
+    "aliases": ["claritin"],
+    "common_use": "Loratadine is an antihistamine used for seasonal allergy symptoms and hives.",
+    "general_guidance": "Use as directed on the label or by your clinician.",
+    "side_effects": ["headache", "dry mouth", "tiredness"],
+    "warnings": [
+      "Ask a clinician before use if you have liver or kidney disease.",
+      "Seek urgent help for breathing trouble or swelling of the face, lips, tongue, or throat."
+    ],
+    "source": {"name": "MedlinePlus - Loratadine", "url": "https://medlineplus.gov/druginfo/meds/a697038.html"}
+  },
+  "diphenhydramine": {
+    "aliases": ["benadryl"],
+    "common_use": "Diphenhydramine is an antihistamine used for allergy symptoms and sometimes short-term sleep trouble.",
+    "general_guidance": "Use as directed. It can cause strong sleepiness and may not be safe for some older adults or people with certain conditions.",
+    "side_effects": ["sleepiness", "dry mouth", "dizziness", "confusion"],
+    "warnings": [
+      "Avoid alcohol, driving, or other sedating medicines unless a clinician says it is safe.",
+      "Ask a clinician before use in older adults, glaucoma, prostate problems, or breathing disease."
+    ],
+    "source": {"name": "MedlinePlus - Diphenhydramine", "url": "https://medlineplus.gov/druginfo/meds/a682539.html"}
+  },
+  "omeprazole": {
+    "aliases": ["prilosec", "ppi"],
+    "common_use": "Omeprazole reduces stomach acid and is used for conditions such as heartburn or reflux.",
+    "general_guidance": "Use as directed on the label or by your prescriber. Persistent symptoms should be reviewed by a clinician.",
+    "side_effects": ["headache", "nausea", "diarrhea", "stomach pain"],
+    "warnings": [
+      "Seek urgent help for chest pain, trouble swallowing, vomiting blood, or black stools.",
+      "Ask a clinician before long-term use."
+    ],
+    "source": {"name": "MedlinePlus - Omeprazole", "url": "https://medlineplus.gov/druginfo/meds/a693050.html"}
+  },
+  "lisinopril": {
+    "aliases": ["prinivil", "zestril", "ace inhibitor"],
+    "common_use": "Lisinopril is an ACE inhibitor prescribed for high blood pressure, heart failure, or kidney protection in some people.",
+    "general_guidance": "Take it exactly as prescribed. Do not stop it without contacting your care team.",
+    "side_effects": ["cough", "dizziness", "headache"],
+    "warnings": [
+      "Seek urgent help for swelling of the face, lips, tongue, or throat.",
+      "Tell your clinician if you are pregnant, may become pregnant, or have kidney problems."
+    ],
+    "source": {"name": "MedlinePlus - Lisinopril", "url": "https://medlineplus.gov/druginfo/meds/a692051.html"}
+  },
+  "atorvastatin": {
+    "aliases": ["lipitor", "statin"],
+    "common_use": "Atorvastatin is a statin prescribed to lower cholesterol and reduce cardiovascular risk.",
+    "general_guidance": "Take it as prescribed and keep follow-up lab visits if your clinician ordered them.",
+    "side_effects": ["muscle aches", "diarrhea", "joint pain"],
+    "warnings": [
+      "Contact your clinician promptly for severe muscle pain, weakness, dark urine, or yellowing skin or eyes.",
+      "Tell your clinician about pregnancy, liver disease, or heavy alcohol use."
+    ],
+    "source": {"name": "MedlinePlus - Atorvastatin", "url": "https://medlineplus.gov/druginfo/meds/a600045.html"}
+  }
+}

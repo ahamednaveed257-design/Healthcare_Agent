@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Headache Self-Care",
+    "question": "What can I do for a headache?",
+    "answer": "Mild headaches are often helped by rest, fluids, regular meals, reducing bright light, and avoiding alcohol. If headaches are new, changing, frequent, or interfering with daily life, it is worth checking in with a clinician.",
+    "self_care": ["Drink water or an oral rehydration drink if you may be dehydrated.", "Rest in a quiet, dim room.", "Eat something light if you skipped a meal.", "Avoid taking pain relievers more often than the label or your clinician recommends."],
+    "monitor": ["Pain level and location", "Fever, neck stiffness, vision change, weakness, confusion", "Recent head injury"],
+    "red_flags": ["Sudden worst headache", "Headache after head injury", "Headache with stiff neck, fever, confusion, fainting, weakness, vision change, or trouble speaking"],
+    "tags": ["headache", "migraine", "tension", "pain", "hydration", "neck", "vision"],
+    "source": {"name": "MedlinePlus - Headache", "url": "https://medlineplus.gov/headache.html"}
+  },
+  {
+    "title": "Fever Basics",
+    "question": "What should I know about fever?",
+    "answer": "A fever is usually a sign that the body is responding to an illness or infection. Rest, fluids, and temperature monitoring can help while you watch for worsening symptoms.",
+    "self_care": ["Drink enough fluids.", "Rest and avoid overheating.", "Use fever medicine only as directed on the label or by a clinician.", "Avoid aspirin for children or teenagers unless a clinician specifically says to use it."],
+    "monitor": ["Temperature and how long fever has lasted", "Rash, stiff neck, confusion, dehydration, breathing trouble", "Age, pregnancy, immune problems, or serious chronic conditions"],
+    "red_flags": ["Trouble breathing", "Confusion", "Stiff neck", "Signs of dehydration", "Fever in an infant", "Fever that is very high or lasts several days"],
+    "tags": ["fever", "temperature", "chills", "infection", "flu", "viral", "dehydration"],
+    "source": {"name": "MedlinePlus - Fever", "url": "https://medlineplus.gov/fever.html"}
+  },
+  {
+    "title": "Cough and Cold Support",
+    "question": "How can I manage a cough or cold?",
+    "answer": "Many coughs and colds improve with rest, fluids, humidified air, and avoiding smoke. A cough that worsens, lasts longer than expected, or comes with breathing trouble needs medical guidance.",
+    "self_care": ["Drink fluids.", "Use humidified air or steam from a warm shower.", "Avoid smoke and strong odors.", "Consider honey for cough if age is over 1 year."],
+    "monitor": ["Shortness of breath or wheezing", "Chest pain", "High or persistent fever", "Dehydration"],
+    "red_flags": ["Trouble breathing", "Chest pain", "Blue lips", "Coughing blood", "Severe weakness"],
+    "tags": ["cough", "cold", "sore throat", "congestion", "respiratory", "flu", "covid", "mucus"],
+    "source": {"name": "MedlinePlus - Cough", "url": "https://medlineplus.gov/cough.html"}
+  },
+  {
+    "title": "Dehydration Warning Signs",
+    "question": "How do I know if I might be dehydrated?",
+    "answer": "Possible dehydration signs include thirst, dry mouth, darker urine, dizziness, fatigue, and urinating less often. Dehydration can become serious quickly in babies, older adults, and people with vomiting or diarrhea.",
+    "self_care": ["Sip water or an oral rehydration drink.", "Take small frequent sips if nauseated.", "Avoid alcohol.", "Seek care if fluids will not stay down."],
+    "monitor": ["Urine color and frequency", "Dizziness or fainting", "Vomiting or diarrhea", "Confusion or unusual sleepiness"],
+    "red_flags": ["Confusion", "Fainting", "No urination", "Cannot keep fluids down", "Signs of dehydration in a baby or older adult"],
+    "tags": ["dehydration", "water", "dizzy", "dizziness", "vomit", "vomiting", "diarrhea", "urine", "thirst"],
+    "source": {"name": "MedlinePlus Medical Encyclopedia - Dehydration", "url": "https://medlineplus.gov/ency/article/000982.htm"}
+  },
+  {
+    "title": "Diabetes and Blood Sugar Awareness",
+    "question": "What are general blood sugar warning signs?",
+    "answer": "Blood sugar that is too low may cause shakiness, sweating, hunger, confusion, or weakness. Blood sugar that is too high may cause thirst, frequent urination, blurry vision, or fatigue. People with diabetes should follow their care plan and contact their care team for repeated unusual readings.",
+    "self_care": ["Follow your diabetes care plan.", "Keep glucose supplies available if your clinician advised them.", "Record readings, symptoms, meals, and medicines.", "Stay hydrated during illness unless your clinician told you to restrict fluids."],
+    "monitor": ["Blood sugar readings", "Confusion, severe weakness, vomiting", "Ketones if your plan includes checking them", "Missed insulin or medication"],
+    "red_flags": ["Confusion", "Seizure", "Fainting", "Persistent vomiting", "Very high readings with ketones or severe symptoms"],
+    "tags": ["diabetes", "blood sugar", "glucose", "hypoglycemia", "hyperglycemia", "insulin", "thirst", "urination", "metformin"],
+    "source": {"name": "MedlinePlus - Diabetes", "url": "https://medlineplus.gov/diabetes.html"}
+  },
+  {
+    "title": "High Blood Pressure Check-In",
+    "question": "What should I know about high blood pressure?",
+    "answer": "High blood pressure often has no symptoms, so home readings and routine care matter. A single high reading can happen, but repeated high readings or symptoms should be discussed with a clinician.",
+    "self_care": ["Rest quietly for five minutes before taking a reading.", "Use the cuff size recommended for your arm.", "Record readings with date and time.", "Take prescribed blood pressure medicines as directed."],
+    "monitor": ["Repeated high readings", "Chest pain, shortness of breath, weakness, severe headache", "Medication changes or missed doses"],
+    "red_flags": ["Chest pain", "Shortness of breath", "Weakness on one side", "Severe headache with confusion or vision changes"],
+    "tags": ["blood pressure", "hypertension", "bp", "lisinopril", "amlodipine", "headache", "dizzy"],
+    "source": {"name": "MedlinePlus - High Blood Pressure", "url": "https://medlineplus.gov/highbloodpressure.html"}
+  },
+  {
+    "title": "Asthma and Wheezing",
+    "question": "What should I do about wheezing or asthma symptoms?",
+    "answer": "Wheezing, chest tightness, coughing, or shortness of breath can happen with asthma or other breathing problems. Follow your asthma action plan if you have one, and seek urgent help for severe breathing trouble.",
+    "self_care": ["Use prescribed rescue medicine according to your action plan.", "Move away from smoke, dust, cold air, or other triggers.", "Sit upright and try to stay calm.", "Contact your care team if rescue medicine is needed more often than usual."],
+    "monitor": ["Breathing rate and ability to speak", "Rescue inhaler use", "Peak flow if you use one", "Blue lips or severe drowsiness"],
+    "red_flags": ["Cannot speak full sentences", "Blue lips", "Severe shortness of breath", "Rescue medicine not helping"],
+    "tags": ["asthma", "wheezing", "albuterol", "inhaler", "breathing", "shortness", "chest tightness", "cough"],
+    "source": {"name": "MedlinePlus - Asthma", "url": "https://medlineplus.gov/asthma.html"}
+  },
+  {
+    "title": "Allergy and Rash Triage",
+    "question": "How should I think about allergies or rash?",
+    "answer": "Allergies may cause sneezing, itching, hives, rash, watery eyes, or swelling. Mild symptoms can often be managed by avoiding triggers, but swelling of the face or throat or breathing trouble can be an emergency.",
+    "self_care": ["Avoid the suspected trigger.", "Do not scratch irritated skin.", "Use medicines only as directed.", "Track new foods, medicines, soaps, or exposures."],
+    "monitor": ["Rash spread", "Facial, lip, tongue, or throat swelling", "Breathing trouble", "New medication or food exposure"],
+    "red_flags": ["Trouble breathing", "Swelling of face, lips, tongue, or throat", "Dizziness or fainting with hives", "Rapidly worsening rash"],
+    "tags": ["allergy", "allergic", "rash", "hives", "itch", "itching", "swelling", "cetirizine", "loratadine", "diphenhydramine"],
+    "source": {"name": "MedlinePlus - Allergy", "url": "https://medlineplus.gov/allergy.html"}
+  },
+  {
+    "title": "Sore Throat Support",
+    "question": "What can I do for a sore throat?",
+    "answer": "A sore throat can come from viral infections, irritation, allergies, or strep throat. Fluids, rest, and soothing measures may help, but severe or persistent symptoms need medical guidance.",
+    "self_care": ["Drink warm fluids.", "Gargle with warm salt water if safe for you.", "Use throat lozenges only if age-appropriate.", "Avoid smoke."],
+    "monitor": ["Fever", "Rash", "Trouble swallowing", "Swollen neck glands", "Symptoms lasting more than a few days"],
+    "red_flags": ["Trouble breathing", "Drooling or inability to swallow", "Severe neck swelling", "Rash with fever"],
+    "tags": ["sore throat", "throat pain", "strep", "tonsil", "swallow", "hoarse", "fever"],
+    "source": {"name": "MedlinePlus - Sore Throat", "url": "https://medlineplus.gov/sorethroat.html"}
+  },
+  {
+    "title": "Nausea and Vomiting",
+    "question": "What should I do for nausea or vomiting?",
+    "answer": "Nausea and vomiting can happen with infections, food-related illness, medicines, pregnancy, migraine, or other causes. The biggest near-term risk is dehydration.",
+    "self_care": ["Pause solid food briefly if actively vomiting.", "Take small sips of water or oral rehydration drink.", "Return to bland foods as tolerated.", "Avoid alcohol and greasy foods."],
+    "monitor": ["How often vomiting occurs", "Ability to keep fluids down", "Severe abdominal pain", "Blood in vomit", "Pregnancy or diabetes"],
+    "red_flags": ["Vomiting blood", "Severe abdominal pain", "Confusion", "Fainting", "Signs of dehydration", "Vomiting after head injury"],
+    "tags": ["nausea", "vomit", "vomiting", "stomach", "dehydration", "food poisoning", "pregnancy"],
+    "source": {"name": "MedlinePlus - Nausea and Vomiting", "url": "https://medlineplus.gov/nauseaandvomiting.html"}
+  },
+  {
+    "title": "Diarrhea Basics",
+    "question": "What can I do for diarrhea?",
+    "answer": "Diarrhea is loose or watery stool. It often improves on its own, but fluids are important. Persistent diarrhea, blood, severe pain, or dehydration symptoms should be checked.",
+    "self_care": ["Drink water or oral rehydration solution.", "Eat bland foods as tolerated.", "Wash hands often.", "Avoid alcohol and very fatty foods."],
+    "monitor": ["Blood or black stool", "Fever", "Signs of dehydration", "Recent antibiotics or travel", "Duration"],
+    "red_flags": ["Blood in stool", "Severe abdominal pain", "Fainting", "Confusion", "No urination", "Diarrhea in an infant or frail older adult"],
+    "tags": ["diarrhea", "loose stool", "stomach", "dehydration", "cramps", "food poisoning", "antibiotics"],
+    "source": {"name": "MedlinePlus - Diarrhea", "url": "https://medlineplus.gov/diarrhea.html"}
+  },
+  {
+    "title": "Urinary Symptoms",
+    "question": "What should I know about urinary pain or frequency?",
+    "answer": "Burning with urination, urgency, cloudy urine, or pelvic discomfort can happen with urinary tract irritation or infection. A clinician may need a urine test and treatment.",
+    "self_care": ["Drink fluids unless you were told to restrict them.", "Avoid delaying urination.", "Track fever, back pain, and symptoms.", "Avoid starting leftover antibiotics."],
+    "monitor": ["Fever", "Back or side pain", "Pregnancy", "Blood in urine", "Symptoms in men or older adults"],
+    "red_flags": ["Fever with back pain", "Confusion", "Pregnancy with urinary symptoms", "Severe pain", "Unable to urinate"],
+    "tags": ["urine", "urinary", "uti", "burning", "pee", "frequent urination", "bladder", "kidney"],
+    "source": {"name": "MedlinePlus - Urinary Tract Infections", "url": "https://medlineplus.gov/urinarytractinfections.html"}
+  },
+  {
+    "title": "Back Pain Basics",
+    "question": "What can I do for back pain?",
+    "answer": "Many mild back pain episodes improve with gentle movement, avoiding heavy lifting, heat or cold, and time. Sudden severe pain or nerve symptoms need medical attention.",
+    "self_care": ["Keep gentle activity as tolerated.", "Avoid heavy lifting.", "Try heat or cold if comfortable.", "Use pain medicine only as directed."],
+    "monitor": ["Pain after injury", "Numbness or weakness", "Fever", "Bladder or bowel control changes"],
+    "red_flags": ["Loss of bladder or bowel control", "New leg weakness", "Numbness in groin area", "Fever with back pain", "Major injury"],
+    "tags": ["back pain", "lower back", "spine", "sciatica", "numbness", "weakness", "injury"],
+    "source": {"name": "MedlinePlus - Back Pain", "url": "https://medlineplus.gov/backpain.html"}
+  },
+  {
+    "title": "Cuts and Wound Care",
+    "question": "How should I care for a minor cut?",
+    "answer": "Minor cuts can often be cleaned with running water and covered with a clean bandage. Deep, dirty, or animal bite wounds need medical guidance, and tetanus status may matter.",
+    "self_care": ["Wash hands before touching the wound.", "Rinse with clean running water.", "Apply gentle pressure for bleeding.", "Cover with a clean bandage and change it daily."],
+    "monitor": ["Redness spreading", "Warmth, pus, fever", "Bleeding that will not stop", "Tetanus vaccine status"],
+    "red_flags": ["Bleeding will not stop", "Deep wound", "Animal or human bite", "Signs of infection", "Wound from dirty or rusty object"],
+    "tags": ["cut", "wound", "bleeding", "bandage", "infection", "tetanus", "bite"],
+    "source": {"name": "MedlinePlus - Wounds and Injuries", "url": "https://medlineplus.gov/woundsandinjuries.html"}
+  },
+  {
+    "title": "Sleep Trouble",
+    "question": "What can I try for insomnia?",
+    "answer": "Trouble sleeping can be linked to stress, schedule changes, caffeine, medicines, pain, or health conditions. A regular routine and reducing stimulants can help.",
+    "self_care": ["Keep a consistent sleep and wake time.", "Avoid caffeine late in the day.", "Keep the bedroom dark and quiet.", "Avoid screens close to bedtime if they worsen sleep."],
+    "monitor": ["Snoring or breathing pauses", "Daytime sleepiness", "New medicine changes", "Mood symptoms"],
+    "red_flags": ["Thoughts of self-harm", "Severe confusion", "No sleep for several days with unusual behavior"],
+    "tags": ["sleep", "insomnia", "tired", "fatigue", "caffeine", "restless", "anxiety"],
+    "source": {"name": "MedlinePlus - Sleep Disorders", "url": "https://medlineplus.gov/sleepdisorders.html"}
+  },
+  {
+    "title": "Anxiety and Panic Feelings",
+    "question": "What can I do when I feel anxious?",
+    "answer": "Anxiety can cause racing thoughts, restlessness, fast heartbeat, sweating, or a feeling of panic. Slow breathing, grounding, and support can help in the moment, but ongoing or severe symptoms deserve care.",
+    "self_care": ["Try slow breathing.", "Name five things you can see and four things you can feel.", "Reduce caffeine if it worsens symptoms.", "Reach out to a trusted person."],
+    "monitor": ["Chest pain", "Fainting", "Substance use", "Thoughts of self-harm", "Symptoms that are new or severe"],
+    "red_flags": ["Thoughts of self-harm", "Chest pain", "Fainting", "Cannot stay safe"],
+    "tags": ["anxiety", "panic", "stress", "heart racing", "breathing", "fear", "mental health"],
+    "source": {"name": "MedlinePlus - Anxiety", "url": "https://medlineplus.gov/anxiety.html"}
+  },
+  {
+    "title": "Eye Redness or Irritation",
+    "question": "What should I know about red or irritated eyes?",
+    "answer": "Eye redness can come from dryness, allergies, infection, or irritation. Pain, vision changes, injury, or chemical exposure needs urgent care.",
+    "self_care": ["Avoid rubbing the eye.", "Wash hands often.", "Use artificial tears if you already know they are safe for you.", "Avoid sharing towels."],
+    "monitor": ["Vision changes", "Eye pain", "Light sensitivity", "Discharge", "Contact lens use"],
+    "red_flags": ["Vision loss", "Severe eye pain", "Chemical exposure", "Eye injury", "Red eye with contact lens pain"],
+    "tags": ["eye", "red eye", "pink eye", "vision", "itchy eyes", "allergy", "contact lens"],
+    "source": {"name": "MedlinePlus - Eye Diseases", "url": "https://medlineplus.gov/eyediseases.html"}
+  },
+  {
+    "title": "Constipation",
+    "question": "What can I do for constipation?",
+    "answer": "Constipation can be related to low fiber, low fluids, inactivity, medicines, or health conditions. Gradual fiber, fluids, and movement may help.",
+    "self_care": ["Drink fluids unless restricted.", "Add fiber gradually.", "Move your body as tolerated.", "Do not overuse laxatives without asking a clinician."],
+    "monitor": ["Severe abdominal pain", "Vomiting", "Blood in stool", "Unexplained weight loss", "New constipation in an older adult"],
+    "red_flags": ["Severe abdominal pain", "Vomiting with swelling", "Blood in stool", "Cannot pass stool or gas"],
+    "tags": ["constipation", "stool", "bowel", "fiber", "laxative", "abdominal", "bloated"],
+    "source": {"name": "MedlinePlus - Constipation", "url": "https://medlineplus.gov/constipation.html"}
+  },
+  {
+    "title": "Chest Pain Safety",
+    "question": "What should I do about chest pain?",
+    "answer": "Chest pain can have many causes, but it can also be a warning sign of a heart or lung emergency. New, severe, crushing, or unexplained chest pain should be treated as urgent.",
+    "self_care": ["Stop activity and sit down.", "Call local emergency services if symptoms are severe, new, or concerning.", "Do not drive yourself to emergency care."],
+    "monitor": ["Shortness of breath", "Sweating", "Nausea", "Pain spreading to arm, jaw, back, or neck", "Fainting"],
+    "red_flags": ["Chest pain with shortness of breath", "Pain spreading to arm, jaw, back, or neck", "Sweating or fainting", "Crushing or severe chest pain"],
+    "tags": ["chest pain", "heart attack", "pressure", "shortness", "sweating", "jaw pain", "arm pain"],
+    "source": {"name": "CDC - Heart Disease Symptoms", "url": "https://www.cdc.gov/heart-disease/signs-symptoms/index.html"}
+  },
+  {
+    "title": "Stroke Warning Signs",
+    "question": "What are stroke warning signs?",
+    "answer": "Stroke warning signs can include face drooping, arm weakness, speech trouble, sudden confusion, sudden vision trouble, sudden dizziness, or sudden severe headache. Time matters.",
+    "self_care": ["Call local emergency services immediately if stroke is possible.", "Note the time symptoms started.", "Do not wait to see if symptoms go away."],
+    "monitor": ["Face drooping", "One-sided weakness or numbness", "Speech trouble", "Vision changes", "Sudden severe headache"],
+    "red_flags": ["Face drooping", "Arm weakness", "Speech trouble", "Sudden confusion", "Sudden vision trouble", "Sudden severe headache"],
+    "tags": ["stroke", "face drooping", "weakness", "slurred speech", "vision", "confusion", "numbness"],
+    "source": {"name": "CDC - Stroke Signs and Symptoms", "url": "https://www.cdc.gov/stroke/signs-symptoms/index.html"}
+  }
+]

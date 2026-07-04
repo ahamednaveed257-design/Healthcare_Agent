@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Healthcare Agent</title>
+  <meta name="description" content="Installable agentic healthcare assistant demo for web and local use.">
+  <meta name="theme-color" content="#087985">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Care Agent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta property="og:title" content="Healthcare Agent">
+  <meta property="og:description" content="Installable agentic healthcare assistant demo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="icons/icon-512.png">
+  <link rel="manifest" href="manifest.webmanifest?v=20260630-feature37">
+  <link rel="icon" href="icons/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&family=Manrope:wght@500..800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css?v=20260630-feature37">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body class="launch-active">
+  <section id="launchScreen" class="launch-screen" aria-label="Healthcare Agent launch">
+    <div class="launch-brand">
+      <img class="launch-logo" src="icons/logo.svg" alt="Healthcare Agent logo">
+      <div>
+        <h1>Healthcare Agent</h1>
+        <p>Installable care routing workspace</p>
+        <p class="builder-credit">Built by Naveed Ahamed</p>
+      </div>
+      <a class="launch-download" data-package-download href="downloads/healthcare-agent-local.zip" download="healthcare-agent-local.zip" title="Download local app" aria-label="Download local app"><i data-lucide="archive"></i><span>Download</span></a>
+    </div>
+
+    <div class="launch-layout">
+      <div class="launch-intro">
+        <p class="launch-kicker">Agentic AI care demo</p>
+        <h2>Use on web, install on device, or run locally.</h2>
+        <div class="platform-row" aria-label="Supported platforms">
+          <span><i data-lucide="smartphone"></i> iOS</span>
+          <span><i data-lucide="tablet-smartphone"></i> Android</span>
+          <span><i data-lucide="monitor"></i> Windows</span>
+          <span><i data-lucide="laptop"></i> macOS</span>
+        </div>
+        <div class="launch-guide" aria-label="Access choices">
+          <div><i data-lucide="shield-check"></i><strong>Local-first demo</strong><span>Patient memory stays in this browser.</span></div>
+          <div><i data-lucide="cloud"></i><strong>Web access</strong><span>Use a simple patient ID for hosted demos.</span></div>
+          <div><i data-lucide="package-check"></i><strong>Offline package</strong><span>Download and run the app from localhost.</span></div>
+        </div>
+        <div class="launch-preview" aria-label="Care routing preview">
+          <div class="preview-line">
+            <span><i data-lucide="message-circle"></i>Patient input</span>
+            <strong>free-form symptoms</strong>
+          </div>
+          <div class="preview-line active">
+            <span><i data-lucide="route"></i>Intent routing</span>
+            <strong>RAG / pharmacy / schedule / alert</strong>
+          </div>
+          <div class="preview-line">
+            <span><i data-lucide="shield-check"></i>Guardrails</span>
+            <strong>source quality + handoff</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="access-panel">
+        <div class="section-heading"><i data-lucide="log-in"></i> Web Login</div>
+        <form id="loginForm" class="login-form">
+          <label for="loginId">Email or patient ID</label>
+          <input id="loginId" autocomplete="username" placeholder="demo-patient">
+          <label for="loginCode">Access code</label>
+          <input id="loginCode" autocomplete="one-time-code" placeholder="demo">
+          <button class="primary-action" type="submit"><i data-lucide="log-in"></i><span>Login on Web</span></button>
+        </form>
+
+        <div class="launch-actions">
+          <button id="localMode" class="secondary-action compact-action" type="button"><i data-lucide="hard-drive"></i><span>Use Local Mode</span></button>
+          <button id="installApp" class="secondary-action compact-action" type="button"><i data-lucide="download"></i><span>Install App</span></button>
+          <a id="downloadLocal" class="secondary-action compact-action" data-package-download href="downloads/healthcare-agent-local.zip" download="healthcare-agent-local.zip"><i data-lucide="archive"></i><span>Download Local App</span></a>
+        </div>
+        <div class="device-tip"><i data-lucide="info"></i><span id="deviceGuide">Use Install App when the browser offers it, or download the local package.</span></div>
+        <p id="installStatus" class="launch-status">Ready for web or local demo access.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="appShell" class="app-shell" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Workspace sections">
+      <button class="mobile-nav-button" type="button" data-mobile-view="library"><i data-lucide="library"></i><span>Library</span></button>
+      <button class="mobile-nav-button active" type="button" data-mobile-view="chat"><i data-lucide="message-circle"></i><span>Chat</span></button>
+      <button class="mobile-nav-button" type="button" data-mobile-view="insights"><i data-lucide="panel-right"></i><span>Insights</span></button>
+    </nav>
+    <aside class="left-panel">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><img src="icons/logo.svg" alt=""></div>
+        <div>
+          <h1>Healthcare Agent</h1>
+          <p id="datasetStatus">Loading knowledge base</p>
+        </div>
+      </div>
+
+      <section class="panel-section">
+        <label class="label-with-icon" for="patientId"><i data-lucide="badge"></i> Patient ID</label>
+        <input id="patientId" autocomplete="off" value="demo-patient">
+      </section>
+
+      <section class="profile-grid" aria-label="Patient context">
+        <div>
+          <i data-lucide="activity"></i>
+          <span>Risk</span>
+          <strong id="riskSummary">Routine</strong>
+        </div>
+        <div>
+          <i data-lucide="messages-square"></i>
+          <span>Memory</span>
+          <strong id="memorySummary">0 turns</strong>
+        </div>
+        <div>
+          <i data-lucide="book-open-check"></i>
+          <span>Topics</span>
+          <strong id="topicSummary">0</strong>
+        </div>
+        <div>
+          <i data-lucide="pill"></i>
+          <span>Meds</span>
+          <strong id="medSummary">0</strong>
+        </div>
+      </section>
+
+      <section class="panel-section patient-context-section">
+        <div class="section-heading"><i data-lucide="clipboard-plus"></i> Patient Context</div>
+        <div class="context-form">
+          <label for="profileMedications">Medicines</label>
+          <input id="profileMedications" autocomplete="off" placeholder="ibuprofen, metformin">
+          <label for="profileConditions">Conditions</label>
+          <input id="profileConditions" autocomplete="off" placeholder="diabetes, asthma">
+          <label for="profileAllergies">Allergies</label>
+          <input id="profileAllergies" autocomplete="off" placeholder="penicillin, latex">
+          <label for="profileContact">Emergency Contact</label>
+          <input id="profileContact" autocomplete="off" placeholder="Name and phone">
+          <button id="saveProfile" class="secondary-action context-save" type="button"><i data-lucide="save"></i><span>Save Context</span></button>
+          <p id="profileSaveStatus" class="mini-status">Saved context improves routing and handoff packets.</p>
+        </div>
+      </section>
+
+      <section class="panel-section">
+        <div class="section-heading"><i data-lucide="sparkles"></i> Common Inputs</div>
+        <div class="quick-grid">
+          <button class="quick" type="button" data-prompt="I have a headache and feel dizzy"><i data-lucide="brain"></i><span>I have a headache and feel dizzy</span></button>
+          <button class="quick" type="button" data-prompt="What are ibuprofen side effects?"><i data-lucide="pill"></i><span>What are ibuprofen side effects?</span></button>
+          <button class="quick" type="button" data-prompt="My blood sugar feels low"><i data-lucide="droplet"></i><span>My blood sugar feels low</span></button>
+          <button class="quick danger" type="button" data-prompt="I have chest pain and cannot breathe"><i data-lucide="siren"></i><span>I have chest pain and cannot breathe</span></button>
+        </div>
+      </section>
+
+      <section class="panel-section">
+        <div class="section-heading"><i data-lucide="library"></i> Knowledge Library</div>
+        <input id="librarySearch" autocomplete="off" placeholder="Search topics">
+        <div id="libraryList" class="library-list"></div>
+      </section>
+
+      <button id="clearMemory" class="secondary-action" type="button"><i data-lucide="trash-2"></i><span>Clear Memory</span></button>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="top-bar">
+        <div>
+          <div class="eyebrow"><i data-lucide="stethoscope"></i> Patient Chat</div>
+          <h2>Care Routing Workspace</h2>
+          <p id="workspaceStatus" class="workspace-status" aria-live="polite">Ready for a new care question.</p>
+        </div>
+        <div class="top-controls">
+          <div class="display-controls" aria-label="Interface style">
+            <button class="display-control active" type="button" data-ui-mode="comfort" title="Comfort interface" aria-label="Comfort interface"><i data-lucide="layout-dashboard"></i><span>Comfort</span></button>
+            <button class="display-control" type="button" data-ui-mode="compact" title="Compact interface" aria-label="Compact interface"><i data-lucide="rows-3"></i><span>Compact</span></button>
+            <button class="display-control" type="button" data-ui-mode="large" title="Large text interface" aria-label="Large text interface"><i data-lucide="type"></i><span>Large</span></button>
+          </div>
+          <div class="top-actions" aria-label="Care plan actions">
+            <button id="newCase" class="icon-action" type="button" title="Start new case" aria-label="Start new case"><i data-lucide="square-pen"></i><span aria-hidden="true">New</span></button>
+            <button id="copyPlan" class="icon-action" type="button" title="Copy care plan" aria-label="Copy care plan"><i data-lucide="copy"></i><span aria-hidden="true">Copy</span></button>
+            <button id="exportPlan" class="icon-action" type="button" title="Download care plan" aria-label="Download care plan"><i data-lucide="file-down"></i><span aria-hidden="true">Export</span></button>
+            <a class="icon-action" data-package-download href="downloads/healthcare-agent-local.zip" download="healthcare-agent-local.zip" title="Download local app" aria-label="Download local app"><i data-lucide="archive"></i><span aria-hidden="true">Download</span></a>
+          </div>
+          <div id="routeBadge" class="route-badge"><i data-lucide="circle-dot"></i><span>Ready</span></div>
+        </div>
+      </header>
+
+      <section id="careFocus" class="care-focus" aria-label="Care focus" aria-live="polite">
+        <div class="focus-card">
+          <span><i data-lucide="route"></i> Route</span>
+          <strong id="focusRoute">Ready</strong>
+        </div>
+        <div class="focus-card">
+          <span><i data-lucide="activity"></i> Urgency</span>
+          <strong id="focusUrgency">Routine</strong>
+        </div>
+        <div class="focus-card wide">
+          <span><i data-lucide="clipboard-list"></i> Next action</span>
+          <strong id="focusNextAction">Start with a symptom, medication question, or appointment request.</strong>
+        </div>
+        <div class="focus-card need-card">
+          <span><i data-lucide="circle-help"></i> Need</span>
+          <strong id="focusMissing">No missing details</strong>
+        </div>
+        <div id="focusClarifiers" class="focus-clarifiers" aria-label="Quick follow-up prompts"></div>
+        <button id="addFocusTask" class="focus-task-action" type="button" hidden>
+          <i data-lucide="list-plus"></i>
+          <span>Add next action to tasks</span>
+        </button>
+      </section>
+
+      <section id="messages" class="messages" aria-live="polite"></section>
+
+      <form id="composer" class="composer">
+        <div class="composer-tools" aria-label="Prompt starters">
+          <button class="prompt-chip" type="button" data-prompt="I have a symptom that started today"><i data-lucide="activity"></i><span>Symptom</span></button>
+          <button class="prompt-chip" type="button" data-prompt="Can you check this medication for side effects?"><i data-lucide="pill"></i><span>Medication</span></button>
+          <button class="prompt-chip" type="button" data-prompt="Schedule an appointment next week for a follow-up"><i data-lucide="calendar-clock"></i><span>Appointment</span></button>
+          <button class="prompt-chip danger" type="button" data-prompt="I have chest pain and cannot breathe"><i data-lucide="siren"></i><span>Emergency</span></button>
+        </div>
+        <div class="composer-row">
+          <textarea id="prompt" placeholder="Type a symptom, medicine question, or appointment request"></textarea>
+          <button id="sendButton" class="send-button" type="submit"><span>Send</span><i data-lucide="send-horizontal"></i></button>
+        </div>
+      </form>
+    </main>
+
+    <aside class="right-panel">
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="route"></i> Routing</div>
+        <dl class="metric-list">
+          <div>
+            <dt><i data-lucide="split"></i> Intent</dt>
+            <dd id="intentMetric">None</dd>
+          </div>
+          <div>
+            <dt><i data-lucide="gauge"></i> Confidence</dt>
+            <dd id="confidenceMetric">--</dd>
+          </div>
+          <div>
+            <dt><i data-lucide="activity"></i> Urgency</dt>
+            <dd id="urgencyMetric">Routine</dd>
+          </div>
+          <div>
+            <dt><i data-lucide="shield-check"></i> Safety</dt>
+            <dd id="safetyMetric">Ready</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="network"></i> Agent Signals</div>
+        <div id="routeScoreList" class="score-list"></div>
+        <div id="profileSignals" class="profile-signals"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="gauge"></i> Device Capabilities</div>
+        <div id="capabilityList" class="capability-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="scan-search"></i> Extracted Context</div>
+        <div id="slotList" class="signal-list"></div>
+        <div id="missingList" class="missing-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="messages-square"></i> Follow-Up Builder</div>
+        <div id="followupBuilder" class="followup-builder"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="sparkles"></i> Smart Intake</div>
+        <div id="caseFactList" class="case-fact-list"></div>
+        <div id="intakePromptList" class="intake-prompt-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="workflow"></i> Agent Actions</div>
+        <div id="actionList" class="action-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="workflow"></i> Agent Loop</div>
+        <div id="workflowTraceList" class="workflow-trace-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="shield-check"></i> Research Guardrails</div>
+        <div id="governanceList" class="governance-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="search-check"></i> Knowledge Match</div>
+        <div id="matchTitle" class="match-title">No active match</div>
+        <p id="matchSummary" class="muted">Ask a question to retrieve a topic or medication entry.</p>
+        <div id="sourceList" class="source-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="clipboard-list"></i> Care Snapshot</div>
+        <div class="snapshot-row">
+          <span><i data-lucide="calendar-clock"></i> Next appointment</span>
+          <strong id="appointmentSummary">Jul 2, 2026</strong>
+        </div>
+        <div class="snapshot-row">
+          <span><i data-lucide="bell-ring"></i> Alert workflow</span>
+          <strong id="alertSummary">Standby</strong>
+        </div>
+        <div class="snapshot-row">
+          <span><i data-lucide="bookmark-check"></i> Last topic</span>
+          <strong id="lastTopicSummary">None</strong>
+        </div>
+        <div class="snapshot-row">
+          <span><i data-lucide="check-check"></i> Care tasks</span>
+          <strong id="taskSummary">0 open</strong>
+        </div>
+        <div class="snapshot-row">
+          <span><i data-lucide="file-text"></i> Case notes</span>
+          <strong id="noteSummary">0 notes</strong>
+        </div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="gauge"></i> Care Readiness</div>
+        <div class="readiness-meter" aria-label="Care readiness score">
+          <div class="readiness-ring"><span id="readinessScore">0%</span></div>
+          <div>
+            <strong id="readinessLabel">Waiting for first message</strong>
+            <p id="readinessSummary" class="muted">Readiness improves when the route, patient context, missing details, and tasks are clear.</p>
+          </div>
+        </div>
+        <div id="readinessList" class="readiness-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="badge"></i> Handoff Pocket</div>
+        <div id="handoffPocket" class="handoff-pocket"></div>
+        <button id="copyHandoff" class="record-action full" type="button"><i data-lucide="copy"></i><span>Copy Handoff</span></button>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="bell-ring"></i> Caregiver Update</div>
+        <div id="caregiverUpdate" class="caregiver-update"></div>
+        <button id="copyCaregiverUpdate" class="record-action full" type="button"><i data-lucide="copy"></i><span>Copy Update</span></button>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="check-check"></i> Care Tasks</div>
+        <form id="taskForm" class="task-form">
+          <input id="taskInput" autocomplete="off" placeholder="Add a reminder or next step">
+          <button id="addTask" class="task-add" type="submit" aria-label="Add care task"><i data-lucide="list-plus"></i></button>
+        </form>
+        <div id="taskList" class="task-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="file-text"></i> Case Notes</div>
+        <form id="noteForm" class="note-form">
+          <textarea id="noteInput" rows="3" placeholder="Add a local note for this case"></textarea>
+          <div class="note-actions">
+            <button id="saveNote" class="record-action" type="submit"><i data-lucide="save"></i><span>Save Note</span></button>
+            <button id="clearNoteDraft" class="record-action muted-action" type="button"><i data-lucide="circle-dot"></i><span>Clear</span></button>
+          </div>
+        </form>
+        <div id="noteList" class="note-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="messages-square"></i> Case Timeline</div>
+        <div id="timelineList" class="timeline-list"></div>
+      </section>
+
+      <section class="insight-section">
+        <div class="section-heading"><i data-lucide="archive"></i> Local Record</div>
+        <div class="record-actions">
+          <button id="copyRecord" class="record-action" type="button"><i data-lucide="copy"></i><span>Copy JSON</span></button>
+          <button id="exportRecord" class="record-action" type="button"><i data-lucide="file-down"></i><span>Download JSON</span></button>
+          <button id="restoreRecord" class="record-action full" type="button"><i data-lucide="upload"></i><span>Restore JSON</span></button>
+        </div>
+        <div id="restorePanel" class="restore-panel" hidden role="dialog" aria-label="Restore local record" aria-hidden="true" tabindex="-1">
+          <textarea id="restoreText" rows="5" placeholder="Paste a Healthcare Agent record JSON"></textarea>
+          <div id="restorePreview" class="restore-preview">No record loaded.</div>
+          <div class="restore-controls">
+            <button id="applyRestore" class="record-action" type="button"><i data-lucide="check-check"></i><span>Restore</span></button>
+            <button id="chooseRecordFile" class="record-action" type="button"><i data-lucide="file-down"></i><span>Choose File</span></button>
+            <button id="cancelRestore" class="record-action muted-action" type="button"><i data-lucide="circle-dot"></i><span>Cancel</span></button>
+          </div>
+        </div>
+        <input id="recordImportInput" class="sr-only" type="file" accept="application/json,.json">
+        <p id="recordStatus" class="muted">Includes memory, profile, care tasks, case notes, and the latest routing snapshot.</p>
+      </section>
+
+      <section class="insight-section compact">
+        <div class="section-heading"><i data-lucide="shield-alert"></i> Safety Boundary</div>
+        <p class="muted">Educational support only. Emergency language is escalated immediately. Diagnoses and personalized dosing are blocked.</p>
+      </section>
+    </aside>
+  </div>
+
+  <script src="app.js?v=20260630-feature37" defer></script>
+</body>
+</html>

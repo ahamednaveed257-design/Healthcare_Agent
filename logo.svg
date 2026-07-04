@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-labelledby="title desc">
+  <title id="title">Healthcare Agent logo</title>
+  <desc id="desc">A white heart pulse mark on a teal and blue app icon.</desc>
+  <rect width="192" height="192" rx="42" fill="#087985"/>
+  <path fill="#365f96" d="M0 129c35-17 73-18 114-3 31 12 57 11 78-3v69H0z"/>
+  <path fill="#fff" d="M96 148c-4 0-8-2-11-5L48 108C24 85 40 45 72 45c10 0 19 4 24 12 6-8 15-12 24-12 33 0 48 40 25 63l-38 35c-3 3-7 5-11 5z"/>
+  <path fill="none" stroke="#087985" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="M50 99h25l10-24 22 48 10-24h25"/>
+</svg>
