@@ -1,0 +1,42 @@
+{
+  "alerts": [
+    {
+      "patient_id": "scan-emergency",
+      "created_at": "2026-06-29T14:54:37",
+      "message": "I have chest pain and cannot breathe",
+      "clinical_slots": {
+        "symptoms": [
+          "chest pain"
+        ],
+        "red_flags": [
+          "chest pain",
+          "cannot breathe"
+        ]
+      },
+      "urgency_level": "emergency",
+      "status": "logged",
+      "channels": [
+        "local_log"
+      ]
+    },
+    {
+      "patient_id": "github-ready-emergency",
+      "created_at": "2026-06-29T20:33:12",
+      "message": "I have chest pain and cannot breathe",
+      "clinical_slots": {
+        "symptoms": [
+          "chest pain"
+        ],
+        "red_flags": [
+          "chest pain",
+          "cannot breathe"
+        ]
+      },
+      "urgency_level": "emergency",
+      "status": "logged",
+      "channels": [
+        "local_log"
+      ]
+    }
+  ]
+}

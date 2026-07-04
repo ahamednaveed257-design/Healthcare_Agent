@@ -1,0 +1,12 @@
+{
+  "appointments": [
+    {
+      "id": "apt-001",
+      "patient_id": "demo-patient",
+      "when": "2026-07-02T09:30",
+      "clinician": "Dr. Patel",
+      "reason": "Primary care follow-up",
+      "status": "scheduled"
+    }
+  ]
+}
